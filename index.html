@@ -1,53 +1,31 @@
 <head>
-<meta charset="UTF-8">
-<title>Reproducción archivos m3u8</title>
-<script src="http://jwpsrv.com/library/ejuoyqCsEeK4ayIACpYGxA.js"></script>
-<style type="text/css"> 
-body{bgcolor:#f0f0f0;}
-#reproductor_aspect{display: none;}
-#reproductor_jwpsrv{position: absolute; top: 0px; z-index: 10;}
-#reproductor_wrapper{position: relative; display: block; width: 700px; height: 400px;}
-</style>
-<script>// <![CDATA[
-//La Key que debes conseguir en la web de JWPlayer en Hexadecimal
-jwplayer.key="6RfMdMqZkkH88h026pcTaaEtxNCWrhiF6ACoxKXjjiI=";
-// ]]></script>
+  <link href="https://vjs.zencdn.net/7.20.2/video-js.css" rel="stylesheet" />
+
+  <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+  <!-- <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script> -->
 </head>
+
 <body>
-<div id="reproductor_wrapper">
-  <object type="application/x-shockwave-flash" data="http://p.jwpcdn.com/6/8/jwplayer.flash.swf" width="100%" height="100%" bgcolor="#000000" id="reproductor" name="reproductor" tabindex="0">
-    <param name="allowfullscreen" value="true">
-    <param name="allowscriptaccess" value="always">
-    <param name="seamlesstabbing" value="true">
-    <param name="wmode" value="opaque">
-  </object>
-  <div id="reproductor_aspect"></div>
-  <div id="reproductor_jwpsrv"></div>
-</div>
-<script>// <![CDATA[
-jwplayer('reproductor').setup({
-    //URL m3u8 que queremos reproducir
-    file: "https://rtvelivestream.akamaized.net/la1_dvr.m3u8",
-    width: "700",
-    skin: "five",
-    height: "400",
-    title: 'xsoundtv.com',
-    image: "",
-    logo: {
-    file: "",
-    position: 'top-right',
-    margin: '0',
-    link: ""
-    },
-    stretching: "fill",
-    autostart: "true",
-                abouttext: '',
-            aboutlink: '',
-  });
-// ]]></script>
-<span>Se está reproduciéndo la URL:</span>
-<p>
-<textarea placeholder="https://rtvelivestream.akamaized.net/la1_dvr.m3u8" cols="95" rows="3" readonly></textarea>
-</p>
- 
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="MY_VIDEO_POSTER.jpg"
+    data-setup="{}"
+  >
+    <source src="MY_VIDEO.mp4" type="video/mp4" />
+    <source src="MY_VIDEO.webm" type="video/webm" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.20.2/video.min.js"></script>
 </body>
